@@ -10,15 +10,15 @@ In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emo
 
 This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data will be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
 
-The project was originally developed in R and has been translated to Python Jupyter notebooks. The original R scripts are retained in `R_files/` for reference.
+The project was originally developed in R and has been translated to Python (Jupyter notebooks). The original R scripts are retained in `R_files/` for reference.  
 
 ## Project Overview
 
-### Python notebooks
+### Python Notebooks
 
 - `Datasets.ipynb`
   - Data cleaning for the dataset `NSCH.csv`
-  - `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [](https://www.childhealthdata.org)
+  - `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [https://www.childhealthdata.org]
   - Exports `FinalAll.csv` and `FinalRural.csv`, which are the datasets used in most of the following notebooks
 - `NSCHAnalysis.ipynb`
   - Descriptive analysis comparing U.S. and Wisconsin urban/rural rates of mental healthcare receipt (`RecMHC`) among children with MEDB issues (`MEDB`)
@@ -35,7 +35,7 @@ The project was originally developed in R and has been translated to Python Jupy
 - `HypothesisTesting.ipynb`
   - Hypothesis testing and correlation analysis on rural county variables
 
-### R reference scripts
+### R scripts
 
 R originals are stored in `R_files/` and mirror the Jupyter notebooks:
 
@@ -52,9 +52,9 @@ R originals are stored in `R_files/` and mirror the Jupyter notebooks:
 
 Primary and derived data in this repository include:
 
-- `NSCH.csv` - 2022 National Survey of Children's Health (primary dataset). `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [](https://www.childhealthdata.org)
-- `CountyHealthNew.xlsx` 2024 County Health Rankings & Roadmaps (CHR), used for county level rankings in `StatisticalInference.ipynb` and hypothesis testing in `HypothesisTesting.ipynb`
-- `RUCC.xlsx` 2024 Rural-Urban Continuum Codes (RUCC), used to target "rural" counties (RUCC codes 4-9).
+- `NSCH.csv` - 2022 National Survey of Children's Health (primary dataset). `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [(https://www.childhealthdata.org)]
+- `CountyHealthNew.xlsx` 2024 County Health Rankings & Roadmaps (CHR), used for county level rankings in `StatisticalInference.ipynb` and hypothesis testing in `HypothesisTesting.ipynb` [https://www.countyhealthrankings.org/health-data/wisconsin/data-and-resources]
+- `RUCC.xlsx` 2024 Rural-Urban Continuum Codes (RUCC), used to target "rural" counties (RUCC codes 4-9) [https://www.ers.usda.gov/data-products/rural-urban-continuum-codes]
 - `FinalAll.csv`, `FinalRural.csv` (derived analysis datasets from `NSCH.csv`, used in `NSCHAnalysis.ipynb`, `LogisticRegression.ipynb`, and `Probability.ipynb`)
 
 ## Environment Setup
