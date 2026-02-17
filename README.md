@@ -1,6 +1,8 @@
 # Children's Access to Mental Healthcare in Rural Wisconsin
 
-In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emotional, Developmental, or Behavioral (MEDB) issue. Despite this, only 9.6% of children received some form of mental healthcare. Of those who did, 82.1% of them lived in urban areas, while only 17.9% were from rural areas. This stark urban-rural divide can be attributed to three main barriers: Availability, Accessibility, and Affordability (Rural Health Information Hub, 2024).
+In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emotional, Developmental, or Behavioral (MEDB) issue. Despite this, only 9.6% of children received some form of mental healthcare.  
+
+Of those who did, 82.1% of them lived in urban areas, while only 17.9% were from rural areas. This urban-rural divide can be attributed to three main barriers: Availability, Accessibility, and Affordability (Rural Health Information Hub, 2024).
 
 •	Availability: There is an acute shortage of mental healthcare providers working in rural communities across the United States, and it is estimated that nearly 70% of rural counties do not have a practicing psychiatrist.  
   
