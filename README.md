@@ -1,41 +1,50 @@
-# WI Children Rural Healthcare Access (R to Python Translation)
+# Children's Access to Mental Healthcare in Rural Wisconsin
 
-This repository analyzes mental health care access for children in rural Wisconsin counties, with a focus on children with mental, emotional, developmental, or behavioral (MEDB) conditions.
+In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emotional, Developmental, or Behavioral (MEDB) issue. Despite this, only 9.6% of children received some form of mental healthcare. Of those who did, 82.1% of them lived in urban areas, while only 17.9% were from rural areas. This stark urban-rural divide can be attributed to three main barriers: Availability, Accessibility, and Affordability (Rural Health Information Hub, 2024).
 
-The project was originally developed in R and has been translated to Python notebooks. The original R scripts are retained in `R_files/` for reference and reproducibility checks.
+•	Availability: There is an acute shortage of mental healthcare providers working in rural communities across the United States, and it is estimated that nearly 70% of rural counties do not have a practicing psychiatrist.
+•	Accessibility: Rural residents often must travel farther to access care due to the lack of providers in their own community.
+•	Affordability: Many insurance plans do not cover mental health services, and rural residents are more likely than urban residents to be uninsured.
 
-## Repository Overview
+This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data will be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
 
-### Python notebooks (translated workflow)
+The project was originally developed in R and has been translated to Python Jupyter notebooks. The original R scripts are retained in `R_files/` for reference.
+
+## Project Overview
+
+### Python notebooks
 
 - `Datasets.ipynb`
-  - Builds cleaned analysis datasets from `NSCH.csv`
-  - Exports `FinalAll.csv` and `FinalRural.csv`
+  - Data cleaning for the dataset `NSCH.csv`
+  - `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [](https://www.childhealthdata.org)
+  - Exports `FinalAll.csv` and `FinalRural.csv`, which are the datasets used in most of the following notebooks
 - `NSCHAnalysis.ipynb`
-  - Descriptive analysis for Wisconsin and urban/rural comparisons
-  - Produces summary tables and visualization output (e.g., `test.png`)
+  - Descriptive analysis comparing U.S. and Wisconsin urban/rural rates of mental healthcare receipt (`RecMHC`) among children with MEDB issues (`MEDB`)
+  - Produces summary tables and accompanying visualization
 - `LogisticRegression.ipynb`
-  - Logistic regression models for predicting receipt of mental health care (`RecMHC`)
-  - Includes model comparison and ROC/AUC-oriented evaluation
+  - Logistic regression models for predicting receipt of mental health care (`RecMHC`) using `FinalRural.csv`
+  - Includes model comparison and evaluation metrics
 - `Probability.ipynb`
   - Probability and conditional probability calculations using `FinalRural.csv`
 - `StatisticalInference.ipynb`
-  - Rural county ranking and inference-related summaries using county-level inputs
+  - Rural Wisconsin county rankings (RUCC codes 4-9) based on the statistically significant predictors identified in LogisticRegression.ipynb
+  - Based on metrics from County Health Rankings
+  - MHPRank (# of mental healthcare providers), ChildPovRank (% children in poverty), and SPRank (% children in single-parent households) are calcucated separately, then summed to create a final combined rank
 - `HypothesisTesting.ipynb`
   - Hypothesis testing and correlation analysis on rural county variables
 
 ### R reference scripts
 
-R originals are stored in `R_files/` and mirror the notebook topics:
+R originals are stored in `R_files/` and mirror the Jupyter notebooks:
 
-- `R_files/DataImport.R`
+- `R_files/DataImport.R` (no equivalent notebook)
 - `R_files/NSCHVars.R`
 - `R_files/NSCHAnalysis.R`
 - `R_files/LogisticRegression.R`
 - `R_files/Probability.R`
 - `R_files/StatisticalInference.R`
 - `R_files/HypothesisTesting.R`
-- `R_files/Viz.R`
+- `R_files/Viz.R` (no equivalent notebook)
 
 ## Data Files
 
@@ -45,11 +54,6 @@ Primary and derived data in this repository include:
 - `CountyHealth.xlsx`, `CountyHealthNew.xlsx`
 - `CHRAllWI.xlsx`, `RUCC.xlsx`
 - `FinalAll.csv`, `FinalRural.csv` (derived analysis datasets)
-
-Generated image assets include:
-
-- `DataViz.png`
-- `test.png`
 
 ## Environment Setup
 
@@ -86,9 +90,3 @@ Common variables used across notebooks:
 - Predictors: `Ins`, `InsTypes`, `CGEmploy`, `Family`, `FPL`, `Sex`, `Race`, `Age`, `Aces`
 - Additional context: `Metro`, `MEDB`
 - Outcome: `RecMHC` (received mental health care in past 12 months)
-
-## Notes on Translation
-
-- Python notebooks preserve the structure and intent of the original R analyses.
-- `R_files/` remains available for side-by-side validation and historical reference.
-- Some notebook cells include exploratory or intermediate outputs; rerunning notebooks regenerates these results.
