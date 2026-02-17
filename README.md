@@ -8,32 +8,41 @@ In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emo
 
 •	Affordability: Many insurance plans do not cover mental health services, and rural residents are more likely than urban residents to be uninsured.  
 
-This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data will be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
+This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data was be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
 
-The project was originally developed in R and has been translated to Python (Jupyter notebooks). The original R scripts are retained in `R_files/` for reference.  
+This project was originally developed in R and has been translated to Python. The original R scripts are retained in `R_files/` for reference.  
 
 ## Project Overview
+
+### Data Files
+
+Primary and derived data in this repository include:
+
+- `NSCH.csv` - 2022 National Survey of Children's Health (primary dataset). `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [(https://www.childhealthdata.org)]
+- `CountyHealthNew.xlsx` 2024 County Health Rankings & Roadmaps (CHR), used for county level rankings in `StatisticalInference.ipynb` and hypothesis testing in `HypothesisTesting.ipynb` [https://www.countyhealthrankings.org/health-data/wisconsin/data-and-resources]
+- `RUCC.xlsx` 2024 Rural-Urban Continuum Codes (RUCC), used to target "rural" counties (RUCC codes 4-9) [https://www.ers.usda.gov/data-products/rural-urban-continuum-codes]
+- `FinalAll.csv`, `FinalRural.csv` (derived analysis datasets from `NSCH.csv`, used in `NSCHAnalysis.ipynb`, `LogisticRegression.ipynb`, and `Probability.ipynb`)
 
 ### Python Notebooks
 
 - `Datasets.ipynb`
   - Data cleaning for the dataset `NSCH.csv`
   - `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [https://www.childhealthdata.org]
-  - Exports `FinalAll.csv` and `FinalRural.csv`, which are the datasets used in most of the following notebooks
+  - Exports the cleaned dataset `FinalRural.csv`, which is the dataset utilized in most of the following notebooks
 - `NSCHAnalysis.ipynb`
-  - Descriptive analysis comparing U.S. and Wisconsin urban/rural rates of mental healthcare receipt (`RecMHC`) among children with MEDB issues (`MEDB`)
-  - Produces summary tables and accompanying visualization
+  - Descriptive analysis of `NSCH.csv`, comparing U.S. and Wisconsin urban/rural rates of mental healthcare receipt (`RecMHC`) among children with MEDB issues (`MEDB`)
+  - Produces summary tables and an accompanying visualization
 - `LogisticRegression.ipynb`
   - Logistic regression models for predicting receipt of mental health care (`RecMHC`) using `FinalRural.csv`
   - Includes model comparisons and evaluation metrics
 - `Probability.ipynb`
   - Probability and conditional probability calculations using `FinalRural.csv`
 - `StatisticalInference.ipynb`
-  - Rural Wisconsin county rankings (RUCC codes 4-9) based on the statistically significant predictors identified in LogisticRegression.ipynb
-  - Based on metrics from County Health Rankings
+  - Rural Wisconsin county rankings (rural meaning RUCC codes 4-9) based on the statistically significant predictors identified in `LogisticRegression.ipynb`
+  - County-level metrics from `CountyHealthNew.xlsx`
   - MHPRank (# of mental healthcare providers), ChildPovRank (% children in poverty), and SPRank (% children in single-parent households) are calcucated separately, then summed to create a final combined rank
 - `HypothesisTesting.ipynb`
-  - Hypothesis testing and correlation analysis on rural county variables
+  - Hypothesis testing and Pearson correlation analysis based on Wisconsin counties (RUCC 4-9)
 
 ### R scripts
 
@@ -48,14 +57,6 @@ R originals are stored in `R_files/` and mirror the Jupyter notebooks:
 - `R_files/HypothesisTesting.R`
 - `R_files/Viz.R` (no equivalent notebook)
 
-## Data Files
-
-Primary and derived data in this repository include:
-
-- `NSCH.csv` - 2022 National Survey of Children's Health (primary dataset). `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [(https://www.childhealthdata.org)]
-- `CountyHealthNew.xlsx` 2024 County Health Rankings & Roadmaps (CHR), used for county level rankings in `StatisticalInference.ipynb` and hypothesis testing in `HypothesisTesting.ipynb` [https://www.countyhealthrankings.org/health-data/wisconsin/data-and-resources]
-- `RUCC.xlsx` 2024 Rural-Urban Continuum Codes (RUCC), used to target "rural" counties (RUCC codes 4-9) [https://www.ers.usda.gov/data-products/rural-urban-continuum-codes]
-- `FinalAll.csv`, `FinalRural.csv` (derived analysis datasets from `NSCH.csv`, used in `NSCHAnalysis.ipynb`, `LogisticRegression.ipynb`, and `Probability.ipynb`)
 
 ## Environment Setup
 
@@ -80,15 +81,9 @@ jupyter notebook
 2. Execute notebooks in this order for full reproducibility:
    1. `Datasets.ipynb`
    2. `NSCHAnalysis.ipynb`
-   3. `LogisticRegression.ipynb`
+   3. `HypothesisTesting.ipynb`
    4. `Probability.ipynb`
-   5. `StatisticalInference.ipynb`
-   6. `HypothesisTesting.ipynb`
+   5. `LogisticRegression.ipynb`
+   6. `StatisticalInference.ipynb`
 
-## Key Variables Used in Modeling
 
-Common variables used across notebooks:
-
-- Predictors: `Ins`, `InsTypes`, `CGEmploy`, `Family`, `FPL`, `Sex`, `Race`, `Age`, `Aces`
-- Additional context: `Metro`, `MEDB`
-- Outcome: `RecMHC` (received mental health care in past 12 months)
