@@ -10,6 +10,8 @@ In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emo
 
 This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data was be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
 
+Source: [https://www.ruralhealthinfo.org/toolkits/mental-health/1/barriers]
+
 This project was originally developed in R and has been translated to Python. The original R scripts are retained in `R_files/` for reference.  
 
 ## Project Overview
