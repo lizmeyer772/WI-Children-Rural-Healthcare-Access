@@ -3,7 +3,9 @@
 In 2022, 28.1% of Wisconsin children aged 3-17 had a parent-reported Mental, Emotional, Developmental, or Behavioral (MEDB) issue. Despite this, only 9.6% of children received some form of mental healthcare. Of those who did, 82.1% of them lived in urban areas, while only 17.9% were from rural areas. This stark urban-rural divide can be attributed to three main barriers: Availability, Accessibility, and Affordability (Rural Health Information Hub, 2024).
 
 •	Availability: There is an acute shortage of mental healthcare providers working in rural communities across the United States, and it is estimated that nearly 70% of rural counties do not have a practicing psychiatrist.
+
 •	Accessibility: Rural residents often must travel farther to access care due to the lack of providers in their own community.
+
 •	Affordability: Many insurance plans do not cover mental health services, and rural residents are more likely than urban residents to be uninsured.
 
 This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data will be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
