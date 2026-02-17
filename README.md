@@ -10,7 +10,7 @@ Of those who did, 82.1% of them lived in urban areas, while only 17.9% were from
 
 •	Affordability: Many insurance plans do not cover mental health services, and rural residents are more likely than urban residents to be uninsured.  
 
-This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data was be utilized to identify specific predictors related to the receipt of needed mental healthcare. 
+This project aims to identify rural Wisconsin counties most in need of additional support by analyzing county-level data related to these three main barriers impacting rural children’s access to mental healthcare. By pinpointing counties with a higher prevalence of these obstacles and examining the relationships between them, we can uncover new insights that will inform evidence-based interventions and recommendations. In addition to county-level data from Wisconsin, national survey data was utilized to identify specific predictors related to the receipt of needed mental healthcare. 
 
 Source: [https://www.ruralhealthinfo.org/toolkits/mental-health/1/barriers]
 
