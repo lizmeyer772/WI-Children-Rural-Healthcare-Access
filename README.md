@@ -90,6 +90,10 @@ jupyter notebook
 
 ## Top 10 High-Need Counties
 
+Below is output from `StatisticalInference.ipynb`
+
+Based on logistic regression, hypothesis testing, and conditional probability findings, three key variables from `CountyHealthNew.xlsx` were identified for their impact on rural children's mental healthcare access: # of Mental Health Providers, % Children in Poverty, and % Single-Parent Households. New "ranked" variables were created for each: Mental Health Provider Rank (fewer providers = lower rank), Child Poverty Rank (higher child poverty % = lower rank), and Single-Parent Household Rank (higher single-parent household % = lower rank). These were merged into a "Combined Rank" variable where lower rank values indicate greater need. The top 10 counties with the highest need for mental healthcare support are shown in the table below.
+
 | FinalRank | County | # Mental Health Providers | % Children in Poverty | % Children in Single-Parent Households | % Less than 18 Years of Age | CombinedRank | RUCC |
 |---:|---|---:|---:|---:|---:|---:|---:|
 | 1 | Buffalo | 1 | 10.80 | 15.12 | 19.67 | 12.0 | 8 |
