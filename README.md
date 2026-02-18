@@ -20,8 +20,6 @@ This project was originally developed in R and has been translated to Python. Th
 
 ### Data Files
 
-Primary and derived data in this repository include:
-
 - `NSCH.csv` - 2022 National Survey of Children's Health. `NSCH.csv` was too big of a file to upload to this repository. You can request the 2022 file here: [(https://www.childhealthdata.org)]
 - `CountyHealthNew.xlsx` - 2024 County Health Rankings & Roadmaps (CHR), used for county level rankings in `StatisticalInference.ipynb` and hypothesis testing in `HypothesisTesting.ipynb` [https://www.countyhealthrankings.org/health-data/wisconsin/data-and-resources]
 - `RUCC.xlsx` - 2024 Rural-Urban Continuum Codes (RUCC), used to target "rural" counties (RUCC codes 4-9) [https://www.ers.usda.gov/data-products/rural-urban-continuum-codes]
