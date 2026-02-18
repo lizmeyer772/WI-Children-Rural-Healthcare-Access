@@ -88,4 +88,18 @@ jupyter notebook
    5. `LogisticRegression.ipynb`
    6. `StatisticalInference.ipynb`
 
+## Top 10 High-Need Counties
+
+| FinalRank | County | # Mental Health Providers | % Children in Poverty | % Children in Single-Parent Households | % Less than 18 Years of Age | CombinedRank | RUCC |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 1 | Buffalo | 1 | 10.8 | 15.12195122 | 19.677395265 | 12.0 | 8 |
+| 2 | Trempealeau | 17 | 10.5 | 13.10880829 | 25.188517428 | 17.0 | 8 |
+| 3 | Pepin | 2 | 14.5 | 16.082603254 | 22.064777328 | 28.0 | 8 |
+| 4 | Clark | 17 | 16.4 | 12.739726027 | 29.241013519 | 39.0 | 8 |
+| 5 | Lafayette | 31 | 14.7 | 12.985074627 | 24.192688274 | 43.0 | 8 |
+| 6 | Dunn | 96 | 12.3 | 11.998164717 | 18.814483801 | 47.0 | 6 |
+| 7 | Dodge | 105 | 10.4 | 16.179080552 | 19.189642283 | 50.0 | 4 |
+| 8 | Taylor | 25 | 15.8 | 15.625 | 22.788485607 | 51.0 | 8 |
+| 9 | Washburn | 22 | 15.9 | 16.682990532 | 17.734019277 | 53.0 | 8 |
+| 10 | Waupaca | 58 | 12.3 | 16.958109147 | 19.903666874 | 53.0 | 6 |
 
